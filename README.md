@@ -22,9 +22,10 @@ Avant de commencer, assurez-vous d'avoir installé :
    cd my_docker_django_app
    ```
 
-3. **Créez le fichier d'environnement**
+3. **Créez les fichiers d'environnement**
    ```bash
-   cp .env.sample .env
+   cp .env.sample .env.dev
+   cp .env.sample .env.prod
    ```
 
 ## 🎯 Utilisation
