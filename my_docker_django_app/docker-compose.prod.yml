@@ -1,0 +1,18 @@
+services:
+  django:
+    build: 
+      context: .
+      dockerfile: ./Dockerfile.prod
+    container_name: django-docker-prod
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env.prod
+    volumes:
+      - static_volume:/app/staticfiles
+      - media_volume:/app/mediafiles
+    restart: unless-stopped
+
+volumes:
+  static_volume:
+  media_volume:
